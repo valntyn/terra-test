@@ -1,0 +1,40 @@
+@mixin onTablet {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin onTabletLarge {
+  @media (min-width: 920px) {
+    @content;
+  }
+}
+
+@mixin onDesktopSmall {
+  @media (min-width:1480px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width:1620px) {
+    @content;
+  }
+}
+
+@mixin square-var ($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin flex-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin default-image-settings {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}

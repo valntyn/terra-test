@@ -1,0 +1,109 @@
+@import "../../utils/mixins";
+@import "../../utils/reset";
+
+.header {
+  &__dimensions {
+    position: sticky;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    align-items: center;
+    padding: 0 30px;
+
+    @include onTablet {
+      padding: 0 70px;
+    }
+
+    @include onDesktopSmall {
+      padding: 0 210px;
+    }
+
+    @include onDesktop {
+      padding: 0 280px;
+    }
+
+    margin-bottom: 60px;
+  }
+
+  &__name {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__right-box {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    border: 1px solid #E2E6E9;
+    transition: 0.1s linear;
+    cursor: pointer;
+    user-select: none;
+    background-color: #fff;
+    font-size: 12px;
+    border-radius: 10%;
+
+    @include onTablet {
+      font-size: 16px;
+    }
+
+    &:hover {
+      border: 2px solid #00b0c8;
+    }
+
+    &--active {
+      border: 2px solid #a5fe92;
+      color: #00b0c8;
+    }
+  }
+
+  &__box-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -1px -1px 0 #e2e6e9;
+    position: relative;
+    padding: 20px 10px 20px 10px;
+
+    &--active {
+      color: #3e3d42;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #3e3d42;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__left-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+    display: none;
+
+    @include onTablet {
+      display: inherit;
+    }
+  }
+}

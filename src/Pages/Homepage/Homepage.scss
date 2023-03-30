@@ -1,0 +1,41 @@
+@import "../../utils/mixins";
+@import "../../utils/reset";
+
+.homepage {
+  &__title {
+    margin-bottom: 18px;
+  }
+
+  &__container {
+    padding: 0 30px;
+    margin: 0 auto;
+    max-width: 1920px;
+
+    @include onTablet {
+      padding: 0 70px;
+    }
+
+    @include onDesktopSmall {
+      padding: 0 220px;
+    }
+
+    @include onDesktop {
+      padding: 0 280px;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include onTabletLarge {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-gap: 16px;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 80px;
+    }
+  }
+}
