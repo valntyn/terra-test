@@ -68,7 +68,7 @@ export const Post: React.FC<PropTypes> = ({ post }) => {
                 ? image
                 : withoutImg
             }
-            alt="product-card"
+            alt="post-card"
             className={styles.img}
           />
         </div>

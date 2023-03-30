@@ -116,7 +116,7 @@ export const FormForNewItem = memo(
           </Formik>
         )}
         <Modal setActive={setModalActive} active={modalActive}>
-          Product was successfully created
+          Post was successfully created
         </Modal>
       </div>
     );

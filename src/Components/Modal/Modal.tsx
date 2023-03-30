@@ -23,7 +23,7 @@ export const Modal: React.FC<PropTypes> = ({ active, setActive, children }) => {
     >
       <button
         type="button"
-        className="rounded bg-white w-[50vw] p-5 border-[none]"
+        className="rounded bg-[#ddd] w-[50vw] p-5 border-[none]"
         onClick={e => e.stopPropagation()}
       >
         {children}

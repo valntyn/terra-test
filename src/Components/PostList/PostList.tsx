@@ -1,7 +1,7 @@
 import styles from './PostList.module.scss';
 import { useAppSelector } from '../../app/hooks';
 import { selectedPosts }
-  from '../../features/visiblePostsSlice/selectVisibleProducts';
+  from '../../features/visiblePostsSlice/selectVisiblePosts';
 import { FilterBar } from '../FilterBar';
 import { Post } from '../Post/Post';
 
