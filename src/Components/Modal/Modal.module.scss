@@ -1,0 +1,7 @@
+.modale {
+  @apply h-screen w-screen bg-[rgba(21,21,21,0.4)] fixed flex justify-center items-center pointer-events-none opacity-0 transition-[0.3s] duration-[linear] border-[none] left-0 top-0;
+
+  .active {
+    @apply pointer-events-auto opacity-100
+  }
+}

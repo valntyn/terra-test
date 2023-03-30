@@ -1,8 +1,7 @@
-import './Homepage.scss';
-
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
+import styles from './Homepage.module.scss';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { selectPostsBySearch } from '../../app/selectors';
 import { FormForNewItem } from '../../Components/Form';
@@ -28,8 +27,8 @@ export const Homepage = () => {
 
   if (hasError) {
     return (
-      <div className="homepage homepage__container">
-        <h1 className="homepage__title">
+      <div className={styles.container}>
+        <h1 className="mb-[18px]">
           Something went wrong! Refresh the page
         </h1>
       </div>
@@ -37,10 +36,10 @@ export const Homepage = () => {
   }
 
   return (
-    <div className="homepage homepage__container">
-      <h1 className="homepage__title">Posts from API</h1>
+    <div className={styles.container}>
+      <h1 className="mb-[18px]">Posts from API</h1>
       {isLoad && <Spinner />}
-      <div className="homepage__grid">
+      <div className={styles.gridBox}>
         <PostList />
         <FormForNewItem />
       </div>

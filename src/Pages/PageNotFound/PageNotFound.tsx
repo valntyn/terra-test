@@ -1,14 +1,11 @@
-import './PageNotFound.scss';
-
 export const PageNotFound = () => {
   return (
-    <main className="pageNotFound__wrap">
+    <main className="flex flex-col justify-center items-center pt-10">
       <p
-        className="pageNotFound__text"
+        className="text-[42px] mb-12"
       >
         Page not found, please return back
       </p>
-      <div className="pageNotFound__img" />
     </main>
   );
 };

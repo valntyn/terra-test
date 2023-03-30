@@ -1,0 +1,11 @@
+.field {
+  @apply relative;
+
+  .input {
+    @apply border-[solid] border-[black] h-10 w-full text-xl mb-[15px] pl-2.5 hover:border hover:border-solid hover:border-black;
+  };
+
+  .error {
+    @apply absolute text-[tomato] text-xs bg-white px-2.5 py-0 right-2.5 -top-1.5;
+  }
+}

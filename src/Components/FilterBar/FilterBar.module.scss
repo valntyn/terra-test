@@ -1,0 +1,15 @@
+.bar {
+  @apply w-full;
+
+  .inputBox {
+    @apply h-full w-full relative border flex gap-3 transition-[0.1s] duration-[linear] mb-5 rounded-lg border-solid border-[rgba(0,0,0,0.5)] sm:mb-10 hover:border hover:border-solid hover:border-black;
+  };
+
+  .input {
+    @apply text-[rgba(0,0,0,0.5)] h-14 w-[70%] text-sm transition-[0.1s] outline-none duration-[linear] border-[none] hover:font-semibold focus:text-[#313237] focus:font-semibold;
+  }
+
+  .image {
+    @apply w-[18px] h-[18px] bg-[url(../../assets/search.svg)] bg-no-repeat bg-contain;
+  }
+}

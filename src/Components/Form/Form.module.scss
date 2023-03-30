@@ -1,0 +1,17 @@
+.form {
+  .button {
+    @apply h-full w-full border transition-[0.1s] duration-[linear] bg-white mb-10 rounded-lg border-solid border-[rgba(0,0,0,0.5)] hover:border hover:border-solid hover:border-black;
+  }
+
+  .buttonTitle {
+    @apply justify-center items-center flex text-[rgba(0,0,0,0.5)] h-[54px] text-sm transition-[0.1s] duration-[linear] border-[none] hover:font-semibold focus:text-[#313237] focus:font-semibold;
+  }
+
+  .formBox {
+    @apply flex w-full flex-col bg-white border p-[30px] rounded-lg border-solid border-[rgba(0,0,0,0.5)] hover:border hover:border-solid hover:border-black;
+  }
+
+  .buttonSubmit {
+    @apply w-full border transition-[0.1s] duration-[linear] bg-white rounded-lg border-solid border-[rgba(0,0,0,0.5)] hover:border hover:border-solid hover:border-black h-10 text-[rgba(0,0,0,0.5)] mt-5 mb-10 mx-0
+  }
+}

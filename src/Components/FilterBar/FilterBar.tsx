@@ -2,10 +2,10 @@ import { memo, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useDebouncedCallback } from 'use-debounce';
 
+import styles from './FilterBar.module.scss';
 import { useAppDispatch } from '../../app/hooks';
 import { setQuery } from '../../features/querySlice/querySlice';
 import { getSearchWith } from '../../helpers/searchHelpers';
-import './FilterBar.scss';
 
 export const FilterBar = memo(
   () => {
@@ -35,21 +35,21 @@ export const FilterBar = memo(
     }, [dispatch]);
 
     return (
-      <div className="filter">
+      <div className={styles.bar}>
         <label
-          className="filter__box-input"
+          className={styles.inputBox}
           htmlFor="input"
         >
           <button
             type="button"
-            className="filter__input-button"
+            className="bg-inherit ml-5 border-[none]"
           >
-            <div className="filter__input-img" />
+            <div className={styles.image} />
           </button>
           <input
             id="input"
             type="text"
-            className="filter__input"
+            className={styles.input}
             placeholder="Search in catalogue..."
             value={search}
             onChange={(e) => {

@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
+import styles from './Post.module.scss';
 import { useAppDispatch } from '../../app/hooks';
 import {
   removePost,
@@ -9,8 +10,6 @@ import {
 } from '../../features/postsSlice/postsSlice';
 import { Root } from '../../types/Root';
 import { withoutImg } from '../../variables';
-
-import './Post.scss';
 
 type PropTypes = {
   post: Root
@@ -51,18 +50,18 @@ export const Post: React.FC<PropTypes> = ({ post }) => {
   };
 
   return (
-    <li className="card">
+    <li className={styles.post}>
       <button
         type="button"
-        className="card__button-delete"
+        className={styles.button}
         onClick={(e) => handleClickDelete(e, id)}
       >
-        <div className="card__cross" />
+        <div className={styles.cross} />
       </button>
       <Link
         to={`/${url}`}
       >
-        <div className="card__img-box">
+        <div>
           <img
             src={
               image?.includes('.png')
@@ -70,24 +69,24 @@ export const Post: React.FC<PropTypes> = ({ post }) => {
                 : withoutImg
             }
             alt="product-card"
-            className="card__img"
+            className={styles.img}
           />
         </div>
       </Link>
-      <div className="card__wrapper">
-        <div className="card__information">
-          <h6 className="card__name">{title}</h6>
+      <div className="px-4 py-3">
+        <div className="flex flex-col">
+          <h6 className="mb-3">{title}</h6>
           <p
             className={classNames(
-              'card__text',
-              { 'card__text-active': active },
+              'overflow-hidden mb-2.5',
+              { 'text-[#d9d9d9] line-through': active },
             )}
           >
             {text}
           </p>
           <button
             type="button"
-            className="card__button-mod"
+            className={styles.buttonMod}
             onClick={(e) => handleClickChange(e, post)}
           >
             {active

@@ -1,20 +1,21 @@
+/* eslint-disable max-len */
 import classNames from 'classnames';
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+import styles from './Navbar.module.scss';
 import { GITHUB } from '../../variables';
-import './Navbar.scss';
 
 export const Navbar = React.memo(
   () => {
     return (
-      <header className="header header__dimensions">
-        <div className="header__right-box">
+      <header className={styles.navbar}>
+        <div className="flex items-center h-full;">
           <NavLink
             to="/"
             className={({ isActive }) => classNames(
-              'header__box-item',
-              { 'header__box-item--active': isActive },
+              styles.boxItem,
+              { 'text-[#3e3d42] after:content-[""] after:absolute after:bottom-[-3px] after:w-full after:h-1 after:bg-[#3e3d42] after:rounded after:inset-x-0': isActive },
             )}
           >
             <p>HOME PAGE</p>
@@ -22,20 +23,20 @@ export const Navbar = React.memo(
           <NavLink
             to="/test-page-not-found"
             className={({ isActive }) => classNames(
-              'header__box-item',
-              { 'header__box-item--active': isActive },
+              styles.boxItem,
+              { 'text-[#3e3d42] after:content-[""] after:absolute after:bottom-[-3px] after:w-full after:h-1 after:bg-[#3e3d42] after:rounded after:inset-x-0': isActive },
             )}
           >
             <p>TEST PAGE</p>
           </NavLink>
         </div>
-        <div className="header__left-box">
-          <p className="header__box-item">
+        <div className={styles.leftBox}>
+          <p className={styles.boxItem}>
             test-task for terrasoft
           </p>
           <Link
             to={GITHUB}
-            className="header__box-item"
+            className={styles.boxItem}
             rel="noreferrer"
             target="_blank"
           >

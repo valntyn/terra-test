@@ -1,0 +1,15 @@
+.navbar {
+  @apply sticky bg-white flex justify-between shadow-[0_1px_0_rgba(0,0,0,0.2)] items-center px-[30px] py-0 sm:px-[70px] sm:py-0 xl:px-[210px] xl:py-0 2xl:px-[280px] 2xl:py-0 mb-[60px];
+
+  .boxItem {
+    @apply flex items-center justify-center shadow-[-1px_-1px_0_#e2e6e9] relative px-2.5 py-5;
+  }
+
+  .leftBox {
+    @apply flex justify-center items-center gap-[30px] h-full;
+  }
+
+  .activeItem {
+    @apply text-[#3e3d42] after:content-[""] after:absolute after:bottom-[-3px] after:w-full after:h-1 after:bg-[#3e3d42] after:rounded after:inset-x-0;
+  }
+}

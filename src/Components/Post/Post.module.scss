@@ -1,0 +1,19 @@
+.post {
+  @apply w-[220px] shadow-[0px_1px_5px_rgba(0,0,0,0.2),0px_3px_4px_rgba(0,0,0,0.12),0px_2px_4px_rgba(0,0,0,0.14)] rounded relative transition-[0.1s] duration-[linear] hover:shadow-[0px_1px_5px_rgba(0,0,0,0.4),0px_3px_4px_rgba(0,0,0,0.16),0px_2px_4px_rgba(0,0,0,0.18)];
+
+  .button {
+    @apply cursor-pointer absolute h-8 w-8 bg-white border border-solid border-[rgba(0,0,0,0.5)] right-1 top-1 hover:border hover:border-solid hover:border-black;
+  };
+
+  .cross {
+    @apply bg-[url(../../assets/cross.svg)] bg-center bg-cover bg-no-repeat h-full w-full block;
+  }
+
+  .img {
+    @apply w-full h-[180px] object-top select-none pointer-events-none p-5;
+  }
+
+  .buttonMod {
+    @apply h-full w-full border transition-[0.1s] duration-[linear] bg-white mb-2 rounded-lg border-solid border-[rgba(0,0,0,0.5)] hover:border hover:border-solid hover:border-black;
+  }
+}

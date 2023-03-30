@@ -1,8 +1,7 @@
 import { Formik, Form } from 'formik';
 import { memo, useState } from 'react';
 
-import './Form.scss';
-
+import styles from './Form.module.scss';
 import { useAppDispatch } from '../../app/hooks';
 import { addPostOnServer } from '../../features/postsSlice/postsSlice';
 import { NewPost } from '../../types/newPost';
@@ -44,13 +43,13 @@ export const FormForNewItem = memo(
     };
 
     return (
-      <div className="form">
+      <div className={styles.form}>
         <button
           type="button"
-          className="form__button"
+          className={styles.button}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <p className="form__button-title">
+          <p className={styles.buttonTitle}>
             Open form to add a new post
           </p>
         </button>
@@ -68,7 +67,7 @@ export const FormForNewItem = memo(
                 touched,
                 handleChange,
               }) => (
-                <Form className="form__form">
+                <Form className={styles.formBox}>
                   <InputField
                     placeholder="Enter the title of a post"
                     error={errors.title}
@@ -106,10 +105,10 @@ export const FormForNewItem = memo(
                     name="url"
                   />
                   <button
-                    className="form__button form__button--submit"
+                    className={styles.buttonSubmit}
                     type="submit"
                   >
-                    Add the new product to the list
+                    Add the new post to the list
                   </button>
                 </Form>
               )

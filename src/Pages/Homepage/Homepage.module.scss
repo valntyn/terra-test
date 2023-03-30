@@ -1,0 +1,9 @@
+.container {
+  @apply max-w-[1920px] mx-auto my-0
+  px-[30px]
+  py-0 sm:px-[70px] sm:py-0 xl:px-[70px] xl:py-0 2xl:px-[200px] 2xl:py-0;
+
+  .gridBox {
+    @apply flex flex-col gap-5 sm:grid sm:grid-cols-[2fr_1fr] sm:gap-4 sm:items-start sm:mb-20;
+  };
+}

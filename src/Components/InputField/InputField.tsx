@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { ChangeEvent } from 'react';
 
+import styles from './InputField.module.scss';
+
 type PropTypes = {
   error: string | undefined,
   touched: boolean | undefined;
@@ -27,9 +29,9 @@ export const InputField: React.FC<PropTypes> = ({
   name,
 }) => {
   return (
-    <div className="form__field">
+    <div className={styles.field}>
       <input
-        className="form__inp"
+        className={styles.input}
         type={type}
         name={name}
         onChange={handleChange}
@@ -38,7 +40,7 @@ export const InputField: React.FC<PropTypes> = ({
         autoComplete="off"
       />
       {error && (
-        <p className="form__error">
+        <p className={styles.error}>
           {error && touched && error}
         </p>
       )}

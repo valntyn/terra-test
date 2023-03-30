@@ -1,6 +1,7 @@
-import React from 'react';
 import classNames from 'classnames';
-import './Modal.scss';
+import React from 'react';
+
+import styles from './Modal.module.scss';
 
 type PropTypes = {
   active: boolean;
@@ -13,16 +14,16 @@ export const Modal: React.FC<PropTypes> = ({ active, setActive, children }) => {
     <button
       type="button"
       className={classNames(
-        'modal',
+        styles.modale,
         {
-          'modal--active': active,
+          'pointer-events-auto opacity-100': active,
         },
       )}
       onClick={() => setActive(false)}
     >
       <button
         type="button"
-        className="modal__content"
+        className="rounded bg-white w-[50vw] p-5 border-[none]"
         onClick={e => e.stopPropagation()}
       >
         {children}
