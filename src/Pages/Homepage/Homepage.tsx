@@ -19,7 +19,7 @@ export const Homepage = () => {
 
   useEffect(() => {
     dispatch(getPostsFromServer());
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     dispatch(setVisiblePosts(searchedPosts));
